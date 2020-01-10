@@ -11,7 +11,8 @@
     "clean": "rimraf dist",
     "build": "babel ./src --out-dir dist",
     "dev": "cross-env NODE_ENV=development npm-run-all server",
-    "prod": "cross-env NODE_ENV=production npm-run-all clean build server:prod"
+    "prod": "cross-env NODE_ENV=production npm-run-all clean build server:prod",
+    "postinstall": "sh ./postinstall.sh"
   },
   "keywords": [],
   "author": "",
