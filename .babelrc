@@ -1,0 +1,15 @@
+{
+  "plugins": [
+    "lodash"
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "targets": {
+          "node": "10.16.0"
+        }
+      }
+    ]
+  ]
+}

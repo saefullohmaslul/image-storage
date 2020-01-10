@@ -1,0 +1,37 @@
+{
+  "name": "storage-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "cross-env DEBUG=server:* babel-node ./src/app.js",
+    "server:prod": "cross-env DEBUG=server:* node ./dist/app.js",
+    "watch": "cross-env DEBUG=server:* nodemon --legacyWatch",
+    "clean": "rimraf dist",
+    "build": "babel ./src --out-dir dist",
+    "dev": "cross-env NODE_ENV=development npm-run-all server",
+    "prod": "cross-env NODE_ENV=production npm-run-all clean build server:prod"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.7.7",
+    "@babel/core": "^7.7.7",
+    "@babel/node": "^7.7.7",
+    "@babel/plugin-transform-runtime": "^7.7.6",
+    "@babel/preset-env": "^7.7.7",
+    "@babel/runtime": "^7.7.7",
+    "babel-plugin-lodash": "^3.3.4",
+    "cross-env": "^6.0.3",
+    "debug": "^4.1.1",
+    "express": "^4.17.1",
+    "multer": "^1.4.2",
+    "npm-run-all": "^4.1.5",
+    "rimraf": "^3.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  }
+}
